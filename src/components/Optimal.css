@@ -1,0 +1,39 @@
+/* Apply Tailwind CSS or your custom CSS classes to style the circular layout */
+.circle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px; /* Adjust the container height as needed */
+    position: relative;
+  }
+  
+  .circle-item {
+    width: 50px;
+    height: 50px;
+    background-color: #3498db;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    transform: translate(-50%, -50%);
+  }
+  
+  /* Calculate rotation for each item to position them in a circle */
+  .circle-item:nth-child(1) {
+    transform: translate(-50%, -50%) rotate(0deg) translateX(150px);
+  }
+  .circle-item:nth-child(2) {
+    transform: translate(-50%, -50%) rotate(72deg) translateX(150px);
+  }
+  .circle-item:nth-child(3) {
+    transform: translate(-50%, -50%) rotate(144deg) translateX(150px);
+  }
+  .circle-item:nth-child(4) {
+    transform: translate(-50%, -50%) rotate(216deg) translateX(150px);
+  }
+  .circle-item:nth-child(5) {
+    transform: translate(-50%, -50%) rotate(288deg) translateX(150px);
+  }
+  

@@ -1,0 +1,28 @@
+---
+import Counter from '../components/Counter.jsx'
+import Simulator from '../components/Simulator.jsx'
+import * as React from 'react'
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+	</head>
+	<body>
+		<h1 class="">Astro</h1>
+		<div>
+		hello world!
+		</div>
+		<br>
+		<Simulator client:load />
+	</body>
+	<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+</html>
+
+
+
+
