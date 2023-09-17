@@ -1,0 +1,62 @@
+---
+import Container from "./Container.astro";
+
+---
+
+<div id="features">
+    <Container>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-secondary">
+            <path fill-rule="evenodd" d="M9 4.5a.75.75 0 01.721.544l.813 2.846a3.75 3.75 0 002.576 2.576l2.846.813a.75.75 0 010 1.442l-2.846.813a3.75 3.75 0 00-2.576 2.576l-.813 2.846a.75.75 0 01-1.442 0l-.813-2.846a3.75 3.75 0 00-2.576-2.576l-2.846-.813a.75.75 0 010-1.442l2.846-.813A3.75 3.75 0 007.466 7.89l.813-2.846A.75.75 0 019 4.5zM18 1.5a.75.75 0 01.728.568l.258 1.036c.236.94.97 1.674 1.91 1.91l1.036.258a.75.75 0 010 1.456l-1.036.258c-.94.236-1.674.97-1.91 1.91l-.258 1.036a.75.75 0 01-1.456 0l-.258-1.036a2.625 2.625 0 00-1.91-1.91l-1.036-.258a.75.75 0 010-1.456l1.036-.258a2.625 2.625 0 001.91-1.91l.258-1.036A.75.75 0 0118 1.5zM16.5 15a.75.75 0 01.712.513l.394 1.183c.15.447.5.799.948.948l1.183.395a.75.75 0 010 1.422l-1.183.395c-.447.15-.799.5-.948.948l-.395 1.183a.75.75 0 01-1.422 0l-.395-1.183a1.5 1.5 0 00-.948-.948l-1.183-.395a.75.75 0 010-1.422l1.183-.395c.447-.15.799-.5.948-.948l.395-1.183A.75.75 0 0116.5 15z" clip-rule="evenodd" />
+          </svg>
+          <h2 class="my-4 text-3xl font-bold text-gray-900 md:text-4xl dark:text-white">
+            The actual riddle of the 100 prisoners.
+          </h2>
+      <div class="space-y-6 justify-between text-gray-600 md:flex flex-row md:gap-6 md:space-y-0 lg:gap-12 lg:items-center">
+        <div class="flex flex-col items-center md:5/12 lg:w-1/2">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/100_prisoners_problem_qtl1.svg/1200px-100_prisoners_problem_qtl1.svg.png"
+            alt="image"
+            loading="lazy"
+            width=""
+            height=""
+            class="w-full rounded-lg"
+          />
+          <div class="flex flex-row">
+            <p class="italic">Source:  </p>
+            <a class="px-1 italic underline underline-offset-2" href="https://en.wikipedia.org/wiki/100_prisoners_problem"> Wikipedia</a>
+          </div>
+        </div>
+        
+        <div class="md:7/12 lg:w-1/2">
+          
+          <p class="italic my-2 text-gray-600 dark:text-gray-300">
+            "The director of a prison offers 100 death row prisoners, who are numbered from 1 to 100, a last chance. A room contains a cupboard with 100 drawers. The director randomly puts one prisoner's number in each closed drawer. The prisoners enter the room, one after another. Each prisoner may open and look into 50 drawers in any order. The drawers are closed again afterwards. If, during this search, every prisoner finds their number in one of the drawers, all prisoners are pardoned. If even one prisoner does not find their number, all prisoners die. Before the first prisoner enters the room, the prisoners may discuss strategy — but may not communicate once the first prisoner enters to look in the drawers. What is the prisoners' best strategy?"" 
+            <br> <br>
+            
+<h3 class="font-bold">Pretty Unlikely</h3>
+<p class=main>At first glance, this seems a pretty hopeless problem.  In fact, it appears that the chances of all the prisoners finding their own tickets is microscopically small. After all, there is no way for the prisoners to communicate any information to each other.</p>
+<p class=main>With just one prisoner, he has a 50:50 chance.  There are 100 boxes, and he gets to open (up to) 50 boxes looking for his ticket.  If he opens the boxes at random he’ll open half the boxes, and his ticket will, or, will not be in the half he opens.  His chance of success is &frac12;.</p>
+
+
+<p class=main>With two prisoners, if both select at random, it would also by &frac12; chance of success each, so for two prisoners, it is &frac12; &times; &frac12; = &frac14;.</br>(They will succeed one time in four).</p>
+
+
+<p class=main>For three prisoners it’s &frac12; &times; &frac12; &times; &frac12; = &frac18;.</p>
+
+
+<p class=main>With 100 prisoners, it’s &frac12; &times; &frac12; &times; &hellip; &frac12; &times; &frac12; <i>(100 times)</i>.</p>
+
+
+<p class=main>This is:</p>
+<p align=center><font face='Times Roman' size=6><i>P<sub>r</sub></i> ≈ 0.000000000000000000000000000008</font></p>
+<p class=main>That’s a pretty small chance.  It appears as though the prisoners are as good as dead.</p>
+
+          </p>
+          
+            </div> 
+          </div>
+        </div>
+      </div>
+    </Container>
+</div>

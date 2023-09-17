@@ -1,0 +1,50 @@
+---
+import Simulator from '../components/Simulator.jsx'
+import * as React from 'react'
+import Stats from '../components/Stats.astro';
+import Features from '../components/Features.astro';
+import HeroSection from '../components/HeroSection.astro';
+import Layout from '../layouts/Layout.astro';
+import Testimonials from '../components/Testimonials.astro';
+import CallToAction from '../components/CallToAction.astro';
+import Blog from '../components/Blog.astro';
+---
+
+
+
+
+<Layout title="Visualization Tool.">
+	<main class="space-y-40 mb-40">
+		<div class="container overflow-hidden mx-auto h-auto py-20">
+		<Simulator client:load />
+		</div>
+	</main>
+</Layout>
+
+<style>
+	@tailwind base;
+	@tailwind components;
+	@tailwind utilities;
+	  
+	/* width */
+	::-webkit-scrollbar {
+		width: 10px;
+	}
+	  
+	/* Track */
+	::-webkit-scrollbar-track {
+		background: #f1f1f1;
+	}
+	  
+	/* Handle */
+	::-webkit-scrollbar-thumb {
+		background: #888;
+		border-radius: 5px;
+	}
+	  
+	/* Handle on hover */
+	::-webkit-scrollbar-thumb:hover {
+		background: #555;
+	}
+	</style>
+
