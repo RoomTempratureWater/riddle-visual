@@ -1,6 +1,7 @@
 ---
 import Container from "./Container.astro";
-
+import { Image } from 'astro:assets';
+import searchimg from '../../public/search.png';
 ---
 
 <div id="solution">
@@ -12,14 +13,9 @@ import Container from "./Container.astro";
       
       <div class="space-y-6 justify-between text-gray-600 md:flex flex-row-reverse md:gap-6 md:space-y-0 lg:gap-12 lg:items-center">
         <div class="flex flex-col items-center md:5/12 lg:w-1/2">
-          <img
-            src="http://datagenetics.com/blog/december42014/search.png"
-            alt="image"
-            loading="lazy"
-            width=""
-            height=""
-            class="w-full rounded-lg"
-          />
+          
+          <Image src={searchimg} alt="Visualization of the prisoners." loading="lazy"/>
+
           <div class="flex flex-row">
             <p class="italic">Source:  </p>
             <a class="px-1 italic underline underline-offset-2" href="http://datagenetics.com/blog/december42014/index.html"> Datagenetics </a>

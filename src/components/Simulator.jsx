@@ -49,24 +49,24 @@ export default function Simulator() {
         <>
         <div class="max-w-7xl mx-auto px-6 md:px-12 xl:px-6">
         <div>
-        <div class="md:container grid grid-cols-10 gap-4 h-[500px] overflow-y-auto bg-gray-200">
+        <div class="md:container resize-y grid grid-cols-[20%_20%_20%_20%_20%] gap-y-4 h-[500px] w-[500px] overflow-y-auto bg-white">
         {shuffleArray(Object.entries(room)).map(([rowKey, value]) => (
           <div key={`row-${rowKey}`} alignItems="center" marginBottom="10px">
             {
-              <div class="w-32 h-24 bg-blue-500 text-white p-4 rounded-md shadow-md">
-                <div class="text-lg font-bold">Box: {rowKey}</div>
-                <div class="mt-2"> Slip: {value}</div>
+              <div class="max-w m-2 p-4 bg-white bg-gradient-to-br from-fuchsia-100 to-purple-100 rounded-lg shadow-[rgba(7,_65,_210,_0.1)_0px_9px_30px] ">
+                <div class="text-lg font-bold text-base text-primary dark:text-white text-[]">Box: {rowKey}</div>
+                <div class="px-2 text-base text-primary dark:text-white"> Slip: {value}</div>
               </div>
             }
           </div>
         ))}
         </div>
       </div>
-
+      <div class="flex flex-col my-6 mx-1">
       <button onClick={() => randomclick()}
       class="relative flex h-11 w-full items-center justify-center px-6 before:absolute before:inset-0 before:rounded-full before:border before:border-transparent before:bg-primary/10 before:bg-gradient-to-b before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-gray-700 dark:before:bg-gray-800 sm:w-max">
         <span
-                        class="relative text-base font-semibold text-primary dark:text-white"
+                        class="w-15 relative text-base font-semibold text-primary dark:text-white"
                         >Randomize</span
                       >
       </button>
@@ -74,12 +74,13 @@ export default function Simulator() {
       <button onClick={() => {setsim(true)}}
       class="relative flex h-11 w-full items-center justify-center px-6 before:absolute before:inset-0 before:rounded-full before:border before:border-transparent before:bg-primary/10 before:bg-gradient-to-b before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-gray-700 dark:before:bg-gray-800 sm:w-max">
             <span
-                        class="relative text-base font-semibold text-primary dark:text-white"
+                        class="w-20 relative text-base font-semibold text-primary dark:text-white"
                         >Simulate!</span
                       >
       </button>
       <br></br>
       {showsim && <Optimal room={room}/>}
+      </div>
       </div>
     </>
     );
